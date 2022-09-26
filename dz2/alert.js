@@ -52,10 +52,10 @@ alert(`${hour} * ${secInHour} = ${answer}`);
 //										ЗАДАЧА 4(СРЕДНЕЕ ЗНАЧЕНИЕ)
 
 
-let oneNumber = +prompt('Введите первое число');
-let twoNumber = +prompt('Введите второе число');
-let threeNumber = +prompt('Введите третье число');
+// let oneNumber = +prompt('Введите первое число');
+// let twoNumber = +prompt('Введите второе число');
+// let threeNumber = +prompt('Введите третье число');
 
-let medium = (oneNumber + threeNumber + threeNumber) / 3;
+// let medium = (oneNumber + threeNumber + threeNumber) / 3;
 
-alert(medium);
+// alert(medium);
