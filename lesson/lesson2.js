@@ -82,4 +82,79 @@
 
 // let age = 4 + 5 + '4';
 
-alert(9 ** (1/6));
+// alert(9 ** (1/6));
+
+// function showMessage() {
+// 	let message = "Привет, я JavaScript!"; // локальная переменная
+ 
+// 	alert( message );
+//  }
+ 
+//  showMessage(); // Привет, я JavaScript!
+ 
+//  alert( message )
+
+// let userName = 'Вася';
+
+// function showMessage() {
+//   let message = 'Привет, ' + userName;
+//   alert(message);
+// }
+
+// showMessage(); // Привет, Вася
+
+
+// let userName = 'Вася';
+
+// function showMessage() {
+// 	let userName = "Петя"; // объявляем локальную переменную
+ 
+// 	let message = 'Привет, ' + userName; // Петя
+// 	alert(message);
+//  }
+ 
+//  // функция создаст и будет использовать свою собственную локальную переменную userName
+//  showMessage();
+ 
+//  alert( userName );
+
+// function showMessage(from, text) {
+
+// 	from = '*' + from + '*'; // немного украсим "from"
+ 
+// 	alert( from + ': ' + text );
+//  }
+ 
+//  let from = "Аня";
+ 
+//  showMessage(from, "Привет"); // *Аня*: Привет
+ 
+//  // значение "from" осталось прежним, функция изменила значение локальной переменной
+//  alert( from );
+
+
+// function showMessage (from, text = "текст не добавлен") {
+// 	console.log(from + ' ' + text);
+// }
+
+// showMessage('Привет')
+
+
+// function checkAge(age) {
+// 	return (age > 18) ? true : confirm('Родители разрешили?');
+//  }
+
+//  function checkAge(age) {
+// 	return age = (age > 18) || confirm 'Родители разрешили?';
+//  }
+
+function min(a, b) {
+	if (a < b) {
+		return a;
+	}
+		return b; 
+}
+
+//  min(2, 5);
+// min(3, -1);
+min(1, 1);
