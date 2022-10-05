@@ -148,13 +148,275 @@
 // 	return age = (age > 18) || confirm 'Родители разрешили?';
 //  }
 
-function min(a, b) {
-	if (a < b) {
-		return a;
-	}
-		return b; 
-}
+// function min(a, b) {
+// 	if (a < b) {
+// 		return a;
+// 	}
+// 		return b; 
+// }
 
 //  min(2, 5);
 // min(3, -1);
-min(1, 1);
+// min(1, 1);
+
+// const objectA = {
+// 	a: 10,
+// 	b: true
+// }
+
+// const copyOfA = objectA;
+
+// copyOfA.a = 20;
+// copyOfA.c = 'abc'
+// copyOfA.n = 'виталя'
+// copyOfA.g = 2+4;
+// copyOfA.c = 30;
+// copyOfA.b = false; // Доступ к свойству того или иного объекта, возможен с помощью оператора '.' точка
+// console.log(objectA);
+
+
+// const a = () => {
+// 	console.log('Hey world');
+// }
+
+// a();
+
+// a = 10;
+
+// a();
+
+
+// const city = {
+// 	usa: 'New York',
+// 	ukrain: 'Kiev',
+// 	gorgia: 'Tbilisi'
+// }
+
+// city.kanada = 'Ottava';
+
+// city['Kazakhstan'] = 'Astana';
+
+// const france = 'pariz';
+// city[france] = 'country';
+
+// city.usa = 'los angeles';
+// delete city.gorgia;
+
+// delete city['usa'];
+// delete city[france]
+// console.log(city);
+
+
+// const dance = {
+// 	samba: 1,
+// 	chacha: 2,
+// 	rumba: 3,
+// 	standart: {
+// 		slowWals: 1,
+// 		tango: 2,
+// 		foxtrot: 3
+// 	}
+// }
+
+// console.log(dance.standart.foxtrot);
+
+// dance.standart.step = 4;
+// console.log(dance.standart)
+// console.log(dance)
+
+
+
+// const car = {
+// 	audi: 'A7', //ключ: значение,
+// 	bmv: 'x5',  //ключ: значение, и т.д
+// 	porshe: '1i7',
+// 	info: {
+// 		mersedes: '3',
+// 		kia: 'rio',
+// 	}
+// }
+
+// car.matiz = 'small';
+// car.info.toyota = 'camry';
+
+// const marka = 'doge';
+// car.info[marka] = 'q5';
+
+// car['shevrole'] = 'camaro';
+
+// delete car.porshe;
+// delete car.info.mersedes;
+// delete car.matiz;
+
+// car.porshe = 911;
+// console.log(car);
+
+
+//											МАССИВЫ
+// const myArray = [1, 2, 3]; // вариант с квадратными скобками
+// console.log(myArray);
+
+// const myArray2 = new Array(1,2,3); // Новый эксемпляр класса Array.
+// console.log(myArray2);//Скобками вызываем функцию Array. Передаем в нее аргументы
+  
+// console.log(myArray == myArray2); //false(разные ссылки)
+
+
+// const myArray = [1, true, 'Bogdan'];
+// console.log(myArray);
+
+// const myArray2 = [1, true, 'Bogdan'];
+// console.log(myArray2);
+
+// console.log(myArray === myArray2);
+
+// const myArray3 = myArray;
+// console.log(myArray3 === myArray2)
+
+// const object = {
+// 	0: 1,
+// 	1: 2,
+// 	2: 3
+// }
+// console.log(object);
+
+// const array = [1, 2, 3];
+// console.log(array);
+
+
+// const family = [1, false, 'abc']
+// console.log(family);
+
+// console.log(family[2]);
+
+// family[0] = 'Pasha';
+// family[3] = 'Sasha';
+// console.log(family);
+
+
+// const water = {
+// 	pepsi: 20,
+// 	fanta: 25,
+// 	merinda: 30,
+// 	tea: {
+// 		black: true,
+// 		green: false,
+// 		fruit: 'good'
+// 	}
+// }
+// water.pepsi = 100;
+// delete water.merinda
+
+// const coffee = 'black';
+// water[coffee] = 'white';
+
+// water.tea['fruit'] = 'chacha';
+
+// console.log(water);
+
+
+
+// const country = ['USA', 'Spain', 'Italy', 'Ukraine']
+
+// country[0] = 'Canada'
+// const delEnd = country.pop();
+// country.push('USA');
+// const delStart = country.shift();
+// country.unshift('Bali');
+
+// console.log(country);
+// console.log(delEnd);
+// console.log(delStart);
+// console.log(country[3]);
+
+
+// let a = 5;
+// let b = 100;
+
+// let c;
+
+// c = a + b;
+// console.log(c);
+
+
+// a = 3;
+// b = 7;
+
+// c = a + b;
+// console.log(c);
+
+// const dance = {
+// 	samba: 2,
+// 	chacha: function() {
+// 		console.log('wals');
+// 	}
+// }
+
+// dance.chacha();
+
+// let name1 = 'Pasha';
+// let name2 = 'Masha';
+
+// const dance = {
+// 	name1,
+// 	name2,
+// 	three: function(a, b) {
+// 		let c = a * b;
+// 		return c
+// 	}
+// }
+// const dance2 = Object.assign({}, dance);
+// dance2.name1 = 'kukushka';
+
+// console.log(dance);
+// console.log(dance2);
+
+
+// let name1 = 'Pasha';
+// let name2 = 'Masha';
+
+// const dance = {
+// 	name1,
+// 	name2,
+// 	three: function(a, b) {
+// 		let c = a * b;
+// 		return c
+// 	}
+// }
+// const dance2 = {...dance};
+// dance2.name1 = 'kukushka';
+
+// console.log(dance);
+// console.log(dance2);
+// console.log(dance.three(4, 4));
+// console.log(dance2.three(4, 4));
+
+
+// let name1 = 'Pasha';
+// let name2 = 'Masha';
+
+// const dance = {
+// 	name1,
+// 	name2,
+// 	three: function(a, b) {
+// 		let c = a * b;
+// 		return c
+// 	}
+// }
+// const dance2 = JSON.parse(JSON.stringify(dance));
+// dance2.name1 = 'kukushka';
+
+// console.log(dance);
+// console.log(dance2);
+// console.log(dance.three(4, 4));
+
+
+const mama = [1, true, false, 4, 5, 'Привет'];
+const papa = new Array(1,2,3,4,5,6);
+
+mama.unshift('tratata')
+
+papa.push('ай лове ю')
+console.log(mama.pop())
+console.log(mama);
+console.log(papa);
