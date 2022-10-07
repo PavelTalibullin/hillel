@@ -411,12 +411,4 @@
 // console.log(dance.three(4, 4));
 
 
-const mama = [1, true, false, 4, 5, 'Привет'];
-const papa = new Array(1,2,3,4,5,6);
 
-mama.unshift('tratata')
-
-papa.push('ай лове ю')
-console.log(mama.pop())
-console.log(mama);
-console.log(papa);
