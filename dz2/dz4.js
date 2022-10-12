@@ -1,147 +1,95 @@
-//											Задача 9 (Массив)
+// 																				ЗАДАЧА 11
 
-// let arr = [];
-// arr.length = +prompt('Введите длину массива(от 1 до 10)');
-
-// for (let q = 0; q < arr.length; q++) {
-// 	arr[q] = prompt(`Введите значение ${q} массива`);
-// }
-// alert(arr);
-
-// arr.sort();
-// function compare (a, b) {
-// if (a > b) {
-// 	return 1;
-// } else if 
-// 	(a < b){
-// 		return -1;
-// 	} else {
-// 		return 0;
+// let users = [
+// 	{
+// 	"index": 0,
+// 	"isActive": true,
+// 	"balance": "$2,226.60",
+// 	"name": "Eugenia Sawyer",
+// 	"gender": "female",
+// 	"phone": "+1 (840) 583-3207",
+// 	"address": "949 John Street, Rose, Puerto Rico, 1857"
+// 	},
+// 	{
+// 	"index": 1,
+// 	"isActive": true,
+// 	"balance": "$2,613.77",
+// 	"name": "Pauline Gallegos",
+// 	"gender": "female",
+// 	"phone": "+1 (985) 593-3328",
+// 	"address": "328 Greenpoint Avenue, Torboy, North Dakota, 6857"
+// 	},
+// 	{
+// 	"index": 2,
+// 	"isActive": false,
+// 	"balance": "$3,976.41",
+// 	"name": "Middleton Chaney",
+// 	"gender": "male",
+// 	"phone": "+1 (995) 591-2478",
+// 	"address": "807 Fleet Walk, Brutus, Arkansas, 9783"
+// 	},
+// 	{
+// 	"index": 3,
+// 	"isActive": true,
+// 	"balance": "$1,934.58",
+// 	"name": "Burns Poole",
+// 	"gender": "male",
+// 	"phone": "+1 (885) 559-3422",
+// 	"address": "730 Seba Avenue, Osage, Alabama, 6290"
+// 	},
+// 	{
+// 	"index": 4,
+// 	"isActive": true,
+// 	"balance": "$3,261.65",
+// 	"name": "Mcfadden Horne",
+// 	"gender": "male",
+// 	"phone": "+1 (942) 565-3988",
+// 	"address": "120 Scholes Street, Kirk, Michigan, 1018"
+// 	},
+// 	{
+// 	"index": 5,
+// 	"isActive": false,
+// 	"balance": "$1,790.56",
+// 	"name": "Suzette Lewis",
+// 	"gender": "female",
+// 	"phone": "+1 (837) 586-3283",
+// 	"address": "314 Dunne Place, Bawcomville, Guam, 9053"
 // 	}
+// 	]
+
+// let user2 = [];
+// 	for (item of users) { 
+//    user2.push(item.balance);
 // }
 
-// alert(arr.sort(compare));
+// user2 = user2.join(' ').replaceAll('$','');
+// user2 = user2.replaceAll(',','').split(/[ ,]/).map(i=>Number(i));
 
-// arr.splice(1, 3);
-// alert(arr);
+// let balanceResult = [];
+// for (let i = 0; i < user2.length; i++) {
+// 	if(user2[i] >= 2000) {
+// 	balanceResult.push(users[i].phone);
+// }
+// }
+// console.log(balanceResult);
 
+// let summ = 0;
+// for(let i = 0; i < user2.length; i++) {
+// 	summ += user2[i];
+// }
+// console.log(summ);
 
-//											Задача 10(Поиск в массиве)
+//																						Задача 12
+// const array = [1, 2, 3, 4, 5, 6, 7];
 
-														// 1
-// const myArr = [16,-37,54,-4,72,-56,47,4,-16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
-// let sumPositive = 0;
-// let quantityPos = 0;
-
-
-// for (let i = 0; i < myArr.length; i++) {
-// 	if (myArr[i] > 0) {
-// 		sumPositive += myArr[i];
-// 		quantityPos += 1;
+// function removeElement(myArray, elem) {
+// 	let index = myArray.indexOf(elem)
+// 	if (index !== -1) {
+// 		myArray.splice(index, 1)
 // 	}
+// 	return myArray
 // }
-// console.log(sumPositive + ', ' + quantityPos);
 
+// removeElement(array, 6);
+// console.log(array);
 
-															// 2
-// const myArr = [16,-37,54,-4,72,-56,47,4,-16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
-// let min = Math.min(...myArr);
-// let position = myArr.indexOf(min); 
-// console.log(min);
-// console.log(position);
-
-
-															// 3
-// const myArr = [16,-37,54,-4,72,-56,47,4,-16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
-// let max = Math.max(...myArr);
-// let position = myArr.indexOf(max);
-// console.log(max);
-// console.log(position);
-
-
-															// 4
-// const myArr = [16,-37,54,-4,72,-56,47,4,-16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
-// let number = 0;
-
-// for (let i = 0; i <= myArr.length; i++) {
-//  if(myArr[i] < 0) {
-// 	number += 1;
-//  }
-// }
-// console.log(number);
-
-
-															// 5
-// const myArr = [16,-37,54,-4,72,-56,47,4,-16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
-// 	let number = 0;
-
-// 		for(let i = 0; i <= myArr.length; i++) {
-// 			if (myArr[i] > 0) {
-// 				if (myArr[i] % 2 == 1) {
-// 					number += 1;
-// 				}
-// 			}
-// 		}
-// 	console.log(number);
-
-
-															// 6
-// const myArr = [16,-37,54,-4,72,-56,47,4,-16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
-// let number = 0;
-
-// for (let i = 0; i <= myArr.length; i++) {
-// 	if (myArr[i] > 0) {
-// 		if(myArr[i] % 2 == 0) {
-// 			number += 1;
-// 		}
-// 	}
-// }
-// console.log(number);
-
-
-															// 7
-// const myArr = [16,-37,54,-4,72,-56,47,4,-16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
-// let number = 0;
-
-// for(let i = 0; i <= myArr.length; i++) {
-// 	if (myArr[i] > 0) {
-// 		if (myArr[i] % 2 == 0) {
-// 			number += myArr[i];
-// 		}
-// 	}
-// }
-// console.log(number);
-
-
-															// 8
-// const myArr = [16,-37,54,-4,72,-56,47,4,-16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
-// let number = 0;
-
-// for (let i = 0; i <= myArr.length; i++) {
-// 	if (myArr[i] > 0) {
-// 		if (myArr[i] % 2 == 1) {
-// 			number += myArr[i];
-// 		}
-// 	}
-// }
-// console.log(number);
-
-
-															// 9
-// const myArr = [16,-37,54,-4,72,-56,47,4,-16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
-// let number = 1;
-
-// for(let i = 0; i <= myArr.length; i++) {
-// 	if(myArr[i] > 0) {
-// 		number *= myArr[i];
-// 	}
-// }
-// console.log(number);
-
-
-															// 10
-// const arr = [16,-37,54,-4,72,-56,47,4,-16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
-
-// let max = Math.max(...arr);
-// const result = arr.map(v => v == max ? v : 0);
-// console.log(result);

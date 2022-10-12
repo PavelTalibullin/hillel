@@ -410,5 +410,57 @@
 // console.log(dance2);
 // console.log(dance.three(4, 4));
 
+// JSON - формат обмена данными
+// JSON.parse // Конвертируем из json в java script
+// JSON.stringify // Конвертируем обратно из JS в JSON  
 
 
+
+
+
+// const personOne = { // Объект. personOne - это только ссылка на объект
+// 	name: 'bob',
+// 	age: 21
+// }
+
+// function increasePersonAge (person) { // Функция increasePersonAge мутирует внешний объект. Person и personOne ссылаются на один объект
+// 	person.age += 1;
+// 	return person
+// }
+
+// increasePersonAge(personOne); // Передаем ссылку на объект
+// console.log(personOne.age); // Так как две ссылки введут на один объект, при мутации св-ва объекта, по обеим ссылкам будет один рез-тат 
+
+
+// const personOne = { // Объект. personOne - это только ссылка на объект
+// 	name: 'bob',
+// 	age: 21
+// }
+// function increasePersonAge (person) {
+// 	const updatedPerson = Object.assign({}, person); // Перменная с копией объекта внутри функции
+// 	updatedPerson.age += 1;
+// 	return updatedPerson
+// }
+
+// const updatedPersonOne = increasePersonAge(personOne); //Новая переменная
+// console.log(personOne.age); 
+// console.log(updatedPersonOne.age);
+
+
+//  function printMyName() {
+// console.log('Bogdan')
+//  }
+
+//  console.log('start');
+
+//  setTimeout(printMyName, 2000);  
+
+const a = 5;
+
+function myFn () {
+    function innerFn () {
+        console.log(a);
+    }
+    innerFn();
+}
+myFn();
