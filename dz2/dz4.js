@@ -62,27 +62,3 @@
 
 // const result = deleteElement(string, element);
 // console.log(result);
-
-
-
-
-
-
-
-
-// function deleteSymbol(string, arraySymbol)  {
-//     let arrayString = Array.from(string);
-    
-//     for (let i = 0; i < arrayString.length; i++) {
-//         for (let j = 0; j < arraySymbol.length; j++) {
-//             if (arrayString.includes(arraySymbol[j])) {
-//                 if (arrayString[i] == arraySymbol[j]) {
-//                     arrayString.splice(i, 1);
-//                 } 
-//             }
-//             return arrayString.join('');
-//         }  
-//     }
-// }
-
-// console.log(deleteSymbol('hello world', ['l', 'd']));
