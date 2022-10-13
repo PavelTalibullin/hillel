@@ -1,95 +1,64 @@
-// 																				ЗАДАЧА 11
+//																Задача 13(1)
+// const myArr = [1, true, '99', 745, undefined, 33, 53];
 
-// let users = [
-// 	{
-// 	"index": 0,
-// 	"isActive": true,
-// 	"balance": "$2,226.60",
-// 	"name": "Eugenia Sawyer",
-// 	"gender": "female",
-// 	"phone": "+1 (840) 583-3207",
-// 	"address": "949 John Street, Rose, Puerto Rico, 1857"
-// 	},
-// 	{
-// 	"index": 1,
-// 	"isActive": true,
-// 	"balance": "$2,613.77",
-// 	"name": "Pauline Gallegos",
-// 	"gender": "female",
-// 	"phone": "+1 (985) 593-3328",
-// 	"address": "328 Greenpoint Avenue, Torboy, North Dakota, 6857"
-// 	},
-// 	{
-// 	"index": 2,
-// 	"isActive": false,
-// 	"balance": "$3,976.41",
-// 	"name": "Middleton Chaney",
-// 	"gender": "male",
-// 	"phone": "+1 (995) 591-2478",
-// 	"address": "807 Fleet Walk, Brutus, Arkansas, 9783"
-// 	},
-// 	{
-// 	"index": 3,
-// 	"isActive": true,
-// 	"balance": "$1,934.58",
-// 	"name": "Burns Poole",
-// 	"gender": "male",
-// 	"phone": "+1 (885) 559-3422",
-// 	"address": "730 Seba Avenue, Osage, Alabama, 6290"
-// 	},
-// 	{
-// 	"index": 4,
-// 	"isActive": true,
-// 	"balance": "$3,261.65",
-// 	"name": "Mcfadden Horne",
-// 	"gender": "male",
-// 	"phone": "+1 (942) 565-3988",
-// 	"address": "120 Scholes Street, Kirk, Michigan, 1018"
-// 	},
-// 	{
-// 	"index": 5,
-// 	"isActive": false,
-// 	"balance": "$1,790.56",
-// 	"name": "Suzette Lewis",
-// 	"gender": "female",
-// 	"phone": "+1 (837) 586-3283",
-// 	"address": "314 Dunne Place, Bawcomville, Guam, 9053"
+// function arithmeticMean (value) {
+// 	let number = 0;
+// 	let sum = 0;
+
+// 	for(let i = 0; i < value.length; i++) {
+// 		if(Number.isInteger(value[i])) {
+// 			number += 1;
+// 			sum += value[i];
+// 		}
 // 	}
-// 	]
+// 	const result = sum / number;
+// 	return result
+// }
+// const answer = arithmeticMean(myArr);
+// console.log(answer);
 
-// let user2 = [];
-// 	for (item of users) { 
-//    user2.push(item.balance);
+//																Задача 13(2)
+
+// const x = prompt('Введите первое число');
+// const y = prompt('Введите второе число');
+// const znak = prompt('Введите любой знак "+, -, *, /, %, ^"');
+
+// function doMath (x, znak, y) {
+// 	 if (~znak.search(/[^+\-*/%^]/) || znak.length !== 1) return 'ошибка';
+// 	 return eval(x + znak.replace('^', '**') + y)
 // }
 
-// user2 = user2.join(' ').replaceAll('$','');
-// user2 = user2.replaceAll(',','').split(/[ ,]/).map(i=>Number(i));
+// alert(doMath(x, znak, y));
 
-// let balanceResult = [];
-// for (let i = 0; i < user2.length; i++) {
-// 	if(user2[i] >= 2000) {
-// 	balanceResult.push(users[i].phone);
-// }
-// }
-// console.log(balanceResult);
+//																Задача 13(3)
 
-// let summ = 0;
-// for(let i = 0; i < user2.length; i++) {
-// 	summ += user2[i];
-// }
-// console.log(summ);
+// const mainArray = prompt('Введите длину главного массива');
+// const internalArray = prompt('Введите длину внутренних массивов');
 
-//																						Задача 12
-// const array = [1, 2, 3, 4, 5, 6, 7];
+// const array = new Array(+mainArray).fill(0).map((_, ind) => 
+// new Array(+internalArray).fill(0).map((_, i) => prompt(`Введите элемент ${i} в подмассиве ${ind}`)));
+// alert('Ваш массив:' + array.map(subArr => '\n' + subArr));
 
-// function removeElement(myArray, elem) {
-// 	let index = myArray.indexOf(elem)
-// 	if (index !== -1) {
-// 		myArray.splice(index, 1)
+
+//																Задача 13(4)
+// const string = prompt('Введите текст');
+// const element = prompt('Какие буквы удалить?');
+
+// function deleteElement (stringArr, elemArr) {
+// 	const str = stringArr.split('');
+// 	const elem = elemArr.split('');
+	
+// 	for (let i = 0; i < str.length; i++) {
+// 		for (let p = 0; p < elem.length; p++) {
+// 			if (str.includes(elem[p])) {
+// 				if (str[i] == elem[p]) {
+// 					str.splice(i, 1)
+// 				}
+// 			}
+// 		}
 // 	}
-// 	return myArray
+// 	return str.join('');
 // }
 
-// removeElement(array, 6);
-// console.log(array);
-
+// const result = deleteElement(string, element);
+// console.log(result);
