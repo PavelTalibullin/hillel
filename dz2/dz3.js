@@ -174,14 +174,14 @@
 
 // - Дано некоторое число. Определить, можно ли получить это число путем возведения числа 3 в некоторую степень. (Например, числа 9, 81 можно получить, а 13 - нельзя)
 
-let number = prompt('Введите любое число', ''); //81
+// let number = prompt('Введите любое число', ''); //81
 
-for (n = 1; n <= number; n++) {
-	if(Math.pow(3, n) == number){
-		console.log('Можно');
-		break;
-	} else if(Math.pow(3, n) >= number) {
-		console.log('Нельзя');
-		break;
-	}
-}
+// for (n = 1; n <= number; n++) {
+// 	if(Math.pow(3, n) == number){
+// 		console.log('Можно');
+// 		break;
+// 	} else if(Math.pow(3, n) >= number) {
+// 		console.log('Нельзя');
+// 		break;
+// 	}
+// }
