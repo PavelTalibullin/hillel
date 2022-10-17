@@ -148,13 +148,182 @@
 // 	return age = (age > 18) || confirm 'Родители разрешили?';
 //  }
 
-function min(a, b) {
-	if (a < b) {
-		return a;
+
+													//   ООП
+
+// class DanceHall { // Имя класса с заглавной буквы
+// 	width; // свойства
+// 	height;
+
+// 	constructor(w, h) { // Обязательный метод. БЛОК ИНСТРУКЦИЙ. Выз-ся при создании объекта. В него можно присваивать значения
+// 		this.width = w;
+// 		this.height = h;
+// 	}
+
+// 	calcArea() { // метод, с помощью которого считаем площадь танцевального хола
+// 		return this.width * this.height; //this в данном случае, это объект, у которого будет вызван этот метод
+// 	}
+
+// 	calcPerimetr() {
+// 		return (this.height + this.width) * 2; // Каждый класс может включать в себя столько свойств и методов, сколько потребуется.
+// 		// Но отличная практика: делать классы под конкретные задачи
+// 	}
+// }
+
+// const rect = new Dance (5, 10); // 5 - w, 10 - h. С пом-ю оператора new мы можем создать объект. Объект, отдельный экзамепляр какого либо класса
+// // Передаем сюда аргументы. Высоту и ширину
+// const rect2 = new Dance (55, 1);
+// const rect3 = new Dance (54, 66);
+// const rect4 = new Dance (52, 4); // Из любого класса мы можем создать столько объектов сколько нам потребуется
+
+// rect.calcArea()//У созданного объекта можно вызвать метод который вернет нам площадь объекта, у которого мы вызвали этот метод
+
+
+//															Пример с private and public
+
+// class DanceHall { 
+// 	_width; // Нижнее подчеркивание _ - это некторое соглашение что свойство приватное
+// 	_height; // чаще всего, все свойста делают приватными, за редким исключением
+
+// 	constructor(w, h) { // Обязательный метод. БЛОК ИНСТРУКЦИЙ. Выз-ся при создании объекта. В него можно присваивать значения
+// 		this._width = w;
+// 		this._height = h;
+// 	}
+
+// 	get width() { 					// Геттер: В данном случае, вызывая этот get, мы вернем ширину этого объекта
+// 		return this._width;
+// 	} 			// Если явно не укзавать модификатор доступа, то по умолчанию устанавливается 'public'.
+// 				// Но лучше писать явно
+
+// 	set width(value) { // Сеттер: Можно либо присвоить новое значение, либо сделать какие-то дополнительные действия
+// 		if (value <= 0) {
+// 			this._width = 1;
+// 		} else {
+// 			this._width = value;
+// 		} 					//например как в данном случае, ширина прямоуголника не может быть отрицательной
+
+// 	}
+
+// 	calcArea() { // метод, с помощью которого считаем площадь танцевального хола
+// 		return this._width * this._height; //this в данном случае, это объект, у которого будет вызван этот метод
+		
+// 	}
+
+// 	calcPerimetr() {
+// 		return (this._height + this._width) * 2; // Каждый класс может включать в себя столько свойств и методов, сколько потребуется.
+// 		// Но отличная практика: делать классы под конкретные задачи
+// 	}
+// }
+
+
+// const rect = new Dance (5, 10);
+// rect.width = -2;
+// console.log(rect)
+
+
+
+
+// class User {	
+// 	private _username; 	// Так свойства являются приватными, нам нужно создать геттеры и сеттеры, чтобы мы могли управлять этими свойствами от куда-то извне
+// 	private _password;
+// 	private _id;
+
+// 	constructor(username, password) {
+// 		this._username = username;
+// 		this._password = password;
+// 		this._id = generateRandomId();
+// 	}
+
+// 	get username() {			// Тут мы показывем что имя может изменяться
+// 		return this._username;
+// 	}
+
+// 	set username(value) {
+// 		this._username = value;
+// 	}
+// 	get password() {			// Пароль тоже модет меняться. поэтому есть и сеттер и геттер
+// 		return this._password;
+// 	}
+ 
+// 	set password(value) {
+// 		this._password = value;
+// 	}
+
+// 	get id(value) {			// Так ID всегда статичный, и изменяться он не будет, то сеттер мы ему не создаем
+// 		this._id= value;
+// 	}
+// }
+
+
+
+
+// class Person {
+// 	private _firstName;
+// 	private _lastName;
+// 	private _age;
+
+// 	constructor(firstName, lastName, age) {
+// 		this._firstName = firstName;
+// 		this._lastName = lastName;
+// 		this._age = age;
+// 	}
+
+// 	get firstName() {
+// 		return this._firstName;
+// 	}
+
+// 	set firstName(value) {
+// 		this._firstName = value;
+// 	}
+// 	get lastName() {
+// 		return this._lastName;
+// 	}
+
+// 	set lastName(value) {
+// 		this._lastName = value;
+// 	}
+
+// 	get age() {
+// 		return this._age;
+// 	}
+
+// 	set age(value) {
+// 		if(value < 0) {
+// 			this._age = 0;
+// 		} else {
+// 			this._age = value
+// 		}
+// 	}
+// }
+
+// class Employee extends Person {
+
+// }
+
+// const employee1 = new Employee("qwert", 'TV', 15);
+// console,log(employee1);
+
+
+class Person {
+	private _firstName;
+	private _lastname;
+	private _age;
+
+	constructor(firstName, lastname, age) {
+		this._firstName = firstName;
+		this._lastname = lastname;
+		this._age = age;
 	}
-		return b; 
+
+	public greeting() { //Метод просто будет выводить в консоль, привет я человек
+		console.log(`Привет, я человек и меня зовут ${this._firstName}`);
+	}
+
+	public get fullName() {
+		return `Фамилия - ${this._lastname} Имя - ${this._firstName}`;
+}
 }
 
-//  min(2, 5);
-// min(3, -1);
-min(1, 1);
+class Developer extends Employee {
+	
+}
