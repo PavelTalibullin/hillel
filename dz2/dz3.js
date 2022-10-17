@@ -184,4 +184,8 @@
 // 		console.log('Нельзя');
 // 		break;
 // 	}
+ dz4
 // }
+
+// }
+ main
